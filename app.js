@@ -52,34 +52,36 @@ const DATA = [
 	// "королева",
 	// "музыкант",
 	// "занятие/профессия",
-	"прошлый",
-	"играть",
-	"использовать",
-	"космос",
-	"ходить на лыжах",
-	"гора",
-	"ездить на велосипеде",
-	"проверять",
-	"спрашивать",
-	"отвечать",
-	"любить",
-	"выбирать",
-	"делать",
-	"о/про",
-	"путиществие",
-	"выходные",
-	"звонить/телефон",
-	"вопрос",
-	"должить",
-	"кино"
+	["прошлый", "past"],
+	["играть", "play"],
+	["использовать", "use"],
+	["космос", "space"],
+	["ходить на лыжах", "ski"],
+	["гора", "mountain"],
+	["ездить на велосипеде", "cycle"],
+	["проверять", "check"],
+	["спрашивать", "ask"],
+	["отвечать", "answer"],
+	["любить", "like"],
+	["выбирать", "choose"],
+	["делать", "make"],
+	["о/про", "about"],
+	["путиществие", "travel"],
+	["выходные", "weekens"],
+	["звонить/телефон", "phone"],
+	["вопрос", "question"],
+	["должить", "report back"],
+	["кино", "cinema"]
 ];
 
 btn.addEventListener("click", () => {
 	btn.style.display = "none";
 	let interval = setInterval(() => {
 		let index = Math.floor(Math.random() * DATA.length);
-		title.innerHTML = `${DATA[index]}`;
+		title.innerHTML = `${DATA[index][0]}`;
+		hideParagraph.innerHTML = `${DATA[index][1]}`;
 	}, 1000);
+	hideParagraph.classList.add("hide");
 
 	setTimeout(() => {
 		clearInterval(interval);
