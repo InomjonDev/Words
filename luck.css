@@ -5,6 +5,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: sans-serif;
+	transition: 0.3s;
 }
 
 .main {
@@ -13,6 +14,11 @@
 	background-color: #000;
 	text-align: center;
 	padding: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 40px;
 }
 
 .main p {
@@ -20,8 +26,14 @@
 	color: #fff;
 	font-weight: bold;
 	display: inline-block;
-	width: 150px;
+	width: 200px;
+	height: 40px;
 	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 22px;
+	border-radius: 12px;
 }
 
 .main p.hide {
@@ -29,9 +41,8 @@
 }
 
 .main h1 {
-	font-size: 4vw;
+	font-size: 48px;
 	color: #ddd;
-	margin-bottom: 250px;
 }
 
 .main button {
@@ -39,6 +50,7 @@
 	font-size: 22px;
 	border-radius: 7px;
 	border: none;
+	visibility: visible;
 }
 
 .main button:hover {
@@ -46,4 +58,8 @@
 	background-color: #000;
 	color: #fff;
 	border: 1px solid #fff;
+}
+
+.main button.btn-hide {
+	visibility: hidden;
 }

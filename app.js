@@ -75,7 +75,7 @@ const DATA = [
 ];
 
 btn.addEventListener("click", () => {
-	btn.style.display = "none";
+	btn.classList.add("btn-hide");
 	let interval = setInterval(() => {
 		let index = Math.floor(Math.random() * DATA.length);
 		title.innerHTML = `${DATA[index][0]}`;
@@ -85,7 +85,7 @@ btn.addEventListener("click", () => {
 
 	setTimeout(() => {
 		clearInterval(interval);
-		btn.style.display = "inline-block";
+		btn.classList.remove("btn-hide");
 	}, 1000);
 });
 
